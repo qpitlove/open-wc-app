@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "build": "rimraf dist && rollup -c rollup.config.js",
+    "start:build": "npm run build && es-dev-server --root-dir dist --app-index index.html --open --compatibility none",
+    "start": "es-dev-server --app-index index.html --node-resolve --open --watch",
+    "gh-publish": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@open-wc/building-rollup": "^1.1.2",
+    "es-dev-server": "^1.5.0",
+    "gh-pages": "^2.2.0",
+    "rimraf": "^2.6.3",
+    "rollup": "^2.3.4"
+  },
+  "name": "open-wc-app",
+  "version": "0.0.0",
+  "description": "Webcomponent open-wc-app following open-wc recommendations",
+  "author": "open-wc-app",
+  "license": "MIT",
+  "dependencies": {
+    "lit-html": "^1.0.0",
+    "lit-element": "^2.0.1"
+  }
+}
